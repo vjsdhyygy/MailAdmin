@@ -1,7 +1,5 @@
 # MailAdmin - 汉化中文版
 
-尚未启动，请期待
-
 请根据 `https://thomas-leister.de/en/mailserver-debian-stretch/` 的邮件服务器安装手册安装邮件数据库。
 
 原版 MailAdmin 位于 `https://github.com/Halbritter/MailAdmin`。
@@ -19,3 +17,12 @@ You will also need Java 7 or higer to run this programm
 从版本1.5开始，此工具将自动将您的连接（无密码）保存在本地硬盘上的SQLite DB中。你可以在 ~/.mailadmin.db 找到这个文件。
 
 您还需要Java 7或更高版本才能运行此程序。
+
+##有什么不同？
+
+ 1. 汉化为中文版本
+ 2. 删除掉mysql 链接中时区的链接
+ 3. 修改版本为 V1.5-CN
+ 
+##版权声明
+  本源码遵循 GUN 许可证 ， 但是原代码 `https://github.com/Halbritter/MailAdmin` 及其作者享有全部版权,本人只为汉化做贡献.
