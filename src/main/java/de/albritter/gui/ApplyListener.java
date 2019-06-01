@@ -57,7 +57,7 @@ public class ApplyListener implements ActionListener {
                 else {
 
                     if (!e.getActionCommand().equals("Remove")) {
-                        JOptionPane.showMessageDialog(src, "Ihre Eingabe in dem Feld Domain ist ung\u00fcltig", "Fehler", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(src, "您的操作有误，请重试", "错误", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
                 }
@@ -72,7 +72,7 @@ public class ApplyListener implements ActionListener {
                     if (src.getPanelMailbox().getPasswordField().getText().equals(src.getPanelMailbox().getPasswordField_1().getText())) {
                         ((Mailbox) dataObject).setPassword(Sha512Crypt.Sha512_crypt(src.getPanelMailbox().getPasswordField().getText(), null, 5000));
                     } else {
-                        JOptionPane.showMessageDialog(src, "Passw\u00f6rter stimmen nicht \u00fcberein", "Fehler", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(src, "两次密码不一样，请重试", "错误", JOptionPane.ERROR_MESSAGE);
                     }
                     ((Mailbox) dataObject).setChangePassword(true);
 
@@ -84,7 +84,7 @@ public class ApplyListener implements ActionListener {
                     ((Mailbox) dataObject).setUsername(user);
                 } else {
                     if (!e.getActionCommand().equals("Remove")) {
-                        JOptionPane.showMessageDialog(src, "Ihre Eingabe in dem Feld \"Mail Address\" ist ung\u00fcltig", "Fehler", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(src, "您的操作有误，请重试", "错误", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
                 }
@@ -106,7 +106,7 @@ public class ApplyListener implements ActionListener {
                 if (!sUser.equals("")) {
                     ((Aliases) dataObject).setSourceUsername(sUser);
                 } else {
-                    JOptionPane.showMessageDialog(src, "Ihre Eingabe in dem Feld \"Source\" ist ung\u00fcltig", "Fehler", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(src, "您的操作有误，请重试", "错误", JOptionPane.ERROR_MESSAGE);
                     if (!e.getActionCommand().equals("Remove"))
                         return;
                 }
@@ -119,7 +119,7 @@ public class ApplyListener implements ActionListener {
                     ((Aliases) dataObject).setDestinationDomain(dDomain);
                 } else {
                     if (!e.getActionCommand().equals("Remove")) {
-                        JOptionPane.showMessageDialog(src, "Ihre Eingabe in dem Feld \"Destination\" ist ung\u00fcltig", "Fehler", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(src, "您的操作有误，请重试", "错误", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
                 }
@@ -134,13 +134,13 @@ public class ApplyListener implements ActionListener {
                 break;
         }
         switch (e.getActionCommand()) {
-            case "Add":
+            case "增加":
                 MySQLHandler.add(dataObject);
                 break;
-            case "Update":
+            case "修改":
                 MySQLHandler.update(dataObject);
                 break;
-            case "Remove":
+            case "删除":
                 MySQLHandler.remove(dataObject);
                 break;
         }

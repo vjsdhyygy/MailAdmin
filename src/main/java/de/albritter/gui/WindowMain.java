@@ -109,14 +109,14 @@ public class WindowMain extends JFrame {
         InputField.add(verticalBox, gbc_verticalBox);
 
         ApplyListener applyListener = new ApplyListener(this);
-        btnAdd = new JButton("Add");
+        btnAdd = new JButton("增加");
         btnAdd.addActionListener(applyListener);
         verticalBox.add(btnAdd);
         btnAdd.setSelected(true);
-        btnUpadte = new JButton("Update");
+        btnUpadte = new JButton("修改");
         btnUpadte.addActionListener(applyListener);
         verticalBox.add(btnUpadte);
-        btnRemove = new JButton("Remove");
+        btnRemove = new JButton("删除");
         btnRemove.addActionListener(applyListener);
         verticalBox.add(btnRemove);
 
@@ -125,14 +125,14 @@ public class WindowMain extends JFrame {
         getContentPane().add(tabbedPane, BorderLayout.CENTER);
         tabbedPane.addChangeListener(new TabbedItemListener(tabbedPane));
         pDomains = new DomainTable();
-        tabbedPane.addTab("Domains", null, pDomains, null);
+        tabbedPane.addTab("域名列表", null, pDomains, null);
 
 
         pMailboxes = new MailboxTable();
-        tabbedPane.addTab("Mailboxes", null, pMailboxes, null);
+        tabbedPane.addTab("邮箱用户", null, pMailboxes, null);
 
         pAliases = new AliasTable();
-        tabbedPane.addTab("Aliases", null, pAliases, null);
+        tabbedPane.addTab("邮箱转发", null, pAliases, null);
 
         pTLS = new TLSTable();
         tabbedPane.addTab("TLS", null, pTLS, null);

@@ -44,7 +44,7 @@ public class Window extends JFrame {
     public Window() {
         super("Login");
         setDefaultCloseOperation(3);
-        setSize(new Dimension(320, 210));
+        setSize(new Dimension(450, 250));
         setMinimumSize(new Dimension(300, 200));
         GridBagLayout gridBagLayout = new GridBagLayout();
         gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0};
@@ -60,7 +60,7 @@ public class Window extends JFrame {
         gbc_rigidArea.gridy = 0;
         getContentPane().add(rigidArea, gbc_rigidArea);
 
-        JLabel lblServer = new JLabel("Server");
+        JLabel lblServer = new JLabel("服务器");
         GridBagConstraints gbc_lblServer = new GridBagConstraints();
         gbc_lblServer.insets = new Insets(0, 0, 5, 5);
         gbc_lblServer.anchor = GridBagConstraints.WEST;
@@ -79,7 +79,7 @@ public class Window extends JFrame {
         getContentPane().add(comboServer, gbc_textField);
 
 
-        JLabel lblNewLabel_1 = new JLabel("Database");
+        JLabel lblNewLabel_1 = new JLabel("数据库");
         GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
         gbc_lblNewLabel_1.anchor = GridBagConstraints.WEST;
         gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
@@ -97,7 +97,7 @@ public class Window extends JFrame {
         getContentPane().add(txtDatabase, gbc_textField_1);
         txtDatabase.setColumns(10);
 
-        JLabel lblNewLabel_2 = new JLabel("Username");
+        JLabel lblNewLabel_2 = new JLabel("用户名");
         GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
         gbc_lblNewLabel_2.anchor = GridBagConstraints.WEST;
         gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
@@ -115,7 +115,7 @@ public class Window extends JFrame {
         getContentPane().add(txtUsername, gbc_textField_2);
         txtUsername.setColumns(10);
 
-        JLabel lblNewLabel_3 = new JLabel("Password");
+        JLabel lblNewLabel_3 = new JLabel("密  码");
         GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
         gbc_lblNewLabel_3.anchor = GridBagConstraints.WEST;
         gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
@@ -150,7 +150,7 @@ public class Window extends JFrame {
 //        getContentPane().add(chckbxNewCheckBox, gbc_chckbxNewCheckBox);
 
         ActionListener loginActionListener = new LoginActionListener(this);
-        JButton btnNewButton_1 = new JButton("Cancel");
+        JButton btnNewButton_1 = new JButton("取消");
         GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
         gbc_btnNewButton_1.anchor = GridBagConstraints.EAST;
         gbc_btnNewButton_1.insets = new Insets(0, 0, 0, 5);
@@ -160,7 +160,7 @@ public class Window extends JFrame {
         btnNewButton_1.addActionListener(loginActionListener);
         getContentPane().add(btnNewButton_1, gbc_btnNewButton_1);
 
-        JButton btnNewButton = new JButton("Login");
+        JButton btnNewButton = new JButton("登录");
         GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
         gbc_btnNewButton.anchor = GridBagConstraints.EAST;
         gbc_btnNewButton.insets = new Insets(0, 0, 0, 5);
@@ -170,7 +170,7 @@ public class Window extends JFrame {
         btnNewButton.setActionCommand("Login");
         getContentPane().add(btnNewButton, gbc_btnNewButton);
 
-        JButton btnRemoveButton = new JButton("Remove");
+        JButton btnRemoveButton = new JButton("删除");
         GridBagConstraints gbc_btnRemoveButton = new GridBagConstraints();
         gbc_btnRemoveButton.anchor = GridBagConstraints.EAST;
         gbc_btnRemoveButton.insets = new Insets(0, 0, 0, 5);

@@ -65,7 +65,7 @@ public class PanelDomain extends JPanel implements TableSelectionEvent {
         gbc_spinner.gridy = 0;
         add(spinnerID, gbc_spinner);
 
-        JLabel lblDomain = new JLabel("Domain");
+        JLabel lblDomain = new JLabel("”Ú√˚");
         GridBagConstraints gbc_lblDomain = new GridBagConstraints();
         gbc_lblDomain.ipadx = 10;
         gbc_lblDomain.insets = new Insets(0, 0, 5, 5);
@@ -93,7 +93,7 @@ public class PanelDomain extends JPanel implements TableSelectionEvent {
                 case "ID":
                     spinnerID.setValue(table.getValueAt(selectedRow, i));
                     break;
-                case "Domain":
+                case "”Ú√˚":
                     textDomain.setText((String) table.getValueAt(selectedRow, i));
             }
         }

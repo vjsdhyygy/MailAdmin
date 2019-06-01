@@ -75,7 +75,7 @@ public class PanelAliases extends JPanel implements TableSelectionEvent {
         gbc_spinnerID.gridy = 0;
         add(spinnerID, gbc_spinnerID);
 
-        JLabel lblSourceMailadress = new JLabel("Source");
+        JLabel lblSourceMailadress = new JLabel("转发邮箱");
         GridBagConstraints gbc_lblSourceMailadress = new GridBagConstraints();
         gbc_lblSourceMailadress.anchor = GridBagConstraints.EAST;
         gbc_lblSourceMailadress.insets = new Insets(0, 0, 5, 5);
@@ -108,7 +108,7 @@ public class PanelAliases extends JPanel implements TableSelectionEvent {
         gbc_comboBox.gridy = 1;
         add(comboBoxDomain, gbc_comboBox);
 
-        JLabel lblDestination = new JLabel("Destination");
+        JLabel lblDestination = new JLabel("收到邮箱");
         GridBagConstraints gbc_lblDestination = new GridBagConstraints();
         gbc_lblDestination.anchor = GridBagConstraints.EAST;
         gbc_lblDestination.insets = new Insets(0, 0, 5, 5);
@@ -126,7 +126,7 @@ public class PanelAliases extends JPanel implements TableSelectionEvent {
         add(textDestination, gbc_textField_1);
         textDestination.setColumns(10);
 
-        chckbxActive = new JCheckBox("Active");
+        chckbxActive = new JCheckBox("激活");
         GridBagConstraints gbc_chckbxActive = new GridBagConstraints();
         gbc_chckbxActive.anchor = GridBagConstraints.WEST;
         gbc_chckbxActive.insets = new Insets(0, 0, 0, 5);
@@ -149,21 +149,21 @@ public class PanelAliases extends JPanel implements TableSelectionEvent {
                 case "ID":
                     spinnerID.setValue(table.getValueAt(selectedRow, i));
                     break;
-                case "Incoming User":
+                case "转发用户":
                     textSourceUsername.setText((String) table.getValueAt(selectedRow, i));
                     break;
 
-                case "Incoming Domain":
+                case "转发域名":
                     comboBoxDomain.setSelectedItem(table.getValueAt(selectedRow, i));
                     break;
 
-                case "Destination User":
+                case "收到用户":
                     textDestination.setText((String) table.getValueAt(selectedRow, i) + '@');
                     break;
-                case "Destination Domain":
+                case "收到域名":
                     textDestination.setText(textDestination.getText() + table.getValueAt(selectedRow, i));
                     break;
-                case "Active":
+                case "激活":
                     //  System.out.println(table.getValueAt(selectedRow, i));
                     chckbxActive.setSelected((Boolean) table.getValueAt(selectedRow, i));
                     break;

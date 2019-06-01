@@ -51,10 +51,10 @@ public class DataTable extends JTable {
         String name = getColumnName(column);
         switch (name) {
             case "ID":
-            case "Quota":
+            case "容量（mb）":
                 return Integer.class;
-            case "Active":
-            case "Sendonly":
+            case "激活":
+            case "只能发送":
                 return Boolean.class;
             default:
                 return String.class;
@@ -74,13 +74,13 @@ public class DataTable extends JTable {
         for (int i = 0; i < header.length; i++) {
             switch (getColumnName(i)) {
                 case "ID":
-                case "Quota":
+                case "容量（mb）":
                     getColumnModel().getColumn(i).setMinWidth(45);
                     getColumnModel().getColumn(i).setPreferredWidth(45);
                     getColumnModel().getColumn(i).setMaxWidth(60);
                     break;
-                case "Sendonly":
-                case "Active":
+                case "只能发送":
+                case "激活":
                     getColumnModel().getColumn(i).setPreferredWidth(60);
                     getColumnModel().getColumn(i).setMaxWidth(60);
                     getColumnModel().getColumn(i).setMinWidth(60);

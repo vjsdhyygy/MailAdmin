@@ -27,7 +27,7 @@ import javax.swing.JScrollPane;
  * Created by hhalbritter on 14.06.2016.
  */
 public class AliasTable extends JPanel implements UpdateTabel {
-    public final static String[] HEADER = new String[]{"ID", "Incoming User", "Incoming Domain", "Destination User", "Destination Domain", "Active"};
+    public final static String[] HEADER = new String[]{"ID", "转发用户", "转发域名", "收到用户", "收到域名", "激活"};
     private DataTable table;
 
     public AliasTable() {

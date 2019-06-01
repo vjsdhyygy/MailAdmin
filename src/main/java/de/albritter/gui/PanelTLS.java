@@ -75,7 +75,7 @@ public class PanelTLS extends JPanel implements TableSelectionEvent {
         gbc_spinnerID.gridy = 0;
         add(spinnerID, gbc_spinnerID);
 
-        JLabel lblDomain = new JLabel("Domain");
+        JLabel lblDomain = new JLabel("”Ú√˚");
         GridBagConstraints gbc_lblDomain = new GridBagConstraints();
         gbc_lblDomain.anchor = GridBagConstraints.EAST;
         gbc_lblDomain.insets = new Insets(0, 0, 5, 5);
@@ -136,7 +136,7 @@ public class PanelTLS extends JPanel implements TableSelectionEvent {
                 case "ID":
                     spinnerID.setValue(table.getValueAt(selectedRow, i));
                     break;
-                case "Domain":
+                case "”Ú√˚":
                     textDomain.setText((String) table.getValueAt(selectedRow, i));
                     break;
                 case "Policy":

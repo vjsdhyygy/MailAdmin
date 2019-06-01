@@ -28,7 +28,7 @@ import java.awt.BorderLayout;
  * Created by hhalbritter on 13.06.2016.
  */
 public class MailboxTable extends JPanel implements UpdateTabel {
-    public final static String[] HEADER = new String[]{"ID", "Username", "Domain", "Password", "Quota", "Active", "Sendonly"};
+    public final static String[] HEADER = new String[]{"ID", "用户", "域名", "密码", "容量（mb）", "激活", "只能发送"};
     DataTable table;
 
     public MailboxTable() {

@@ -92,7 +92,7 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
         gbc_spinner_1.gridy = 0;
         add(spinnerID, gbc_spinner_1);
 
-        JLabel lblMailAddress = new JLabel("Mail address");
+        JLabel lblMailAddress = new JLabel("邮件地址");
         GridBagConstraints gbc_lblMailAddress = new GridBagConstraints();
         gbc_lblMailAddress.anchor = GridBagConstraints.EAST;
         gbc_lblMailAddress.insets = new Insets(0, 0, 5, 5);
@@ -125,7 +125,7 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
         gbc_validDomainList.fill = GridBagConstraints.HORIZONTAL;
         add(comboBoxDomain, gbc_validDomainList);
 
-        JLabel lblPassword = new JLabel("Password");
+        JLabel lblPassword = new JLabel("用户密码");
         GridBagConstraints gbc_lblPassword = new GridBagConstraints();
         gbc_lblPassword.anchor = GridBagConstraints.EAST;
         gbc_lblPassword.insets = new Insets(0, 0, 5, 5);
@@ -143,7 +143,7 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
         gbc_passwordField.fill = GridBagConstraints.HORIZONTAL;
         add(passwordField, gbc_passwordField);
 
-        JLabel lblRetypePassword = new JLabel("Retype Password");
+        JLabel lblRetypePassword = new JLabel("确认密码");
         GridBagConstraints gbc_lblRetypePassword = new GridBagConstraints();
         gbc_lblRetypePassword.anchor = GridBagConstraints.EAST;
         gbc_lblRetypePassword.insets = new Insets(0, 0, 5, 5);
@@ -161,7 +161,7 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
         gbc_passwordField_1.fill = GridBagConstraints.HORIZONTAL;
         add(passwordField_1, gbc_passwordField_1);
 
-        JLabel lblQuota = new JLabel("Quota (mb)");
+        JLabel lblQuota = new JLabel("容量 (mb)");
         GridBagConstraints gbc_lblQuota = new GridBagConstraints();
         gbc_lblQuota.anchor = GridBagConstraints.EAST;
         gbc_lblQuota.insets = new Insets(0, 0, 5, 5);
@@ -180,7 +180,7 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
         add(spinnerQuota, gbc_spinnerQuota);
 
 
-        chckbxSendonly = new JCheckBox("Sendonly");
+        chckbxSendonly = new JCheckBox("只能发送");
         chckbxSendonly.setActionCommand("Sendonly");
         GridBagConstraints gbc_chckbxSendonly = new GridBagConstraints();
         gbc_chckbxSendonly.anchor = GridBagConstraints.WEST;
@@ -189,7 +189,7 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
         gbc_chckbxSendonly.gridy = 5;
         add(chckbxSendonly, gbc_chckbxSendonly);
 
-        chckbxUpdatePassword = new JCheckBox("Change Password");
+        chckbxUpdatePassword = new JCheckBox("变更密码");
         chckbxUpdatePassword.setActionCommand("Change Password");
         GridBagConstraints gbc_chckbxUpdatePassword = new GridBagConstraints();
         gbc_chckbxUpdatePassword.anchor = GridBagConstraints.WEST;
@@ -198,7 +198,7 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
         gbc_chckbxUpdatePassword.gridy = 7;
         add(chckbxUpdatePassword, gbc_chckbxUpdatePassword);
 
-        chckbxActive = new JCheckBox("Active");
+        chckbxActive = new JCheckBox("激活");
         chckbxActive.setActionCommand("Active");
         GridBagConstraints gbc_chckbxActive = new GridBagConstraints();
         gbc_chckbxActive.anchor = GridBagConstraints.WEST;
@@ -221,19 +221,19 @@ public class PanelMailbox extends JPanel implements TableSelectionEvent {
                 case "ID":
                     spinnerID.setValue(table.getValueAt(selectedRow, i));
                     break;
-                case "Domain":
+                case "域名":
                     comboBoxDomain.setSelectedItem(table.getValueAt(selectedRow, i));
                     break;
-                case "Username":
+                case "用户":
                     textMail.setText((String) table.getValueAt(selectedRow, i));
                     break;
-                case "Active":
+                case "激活":
                     chckbxActive.setSelected((Boolean) table.getValueAt(selectedRow, i));
                     break;
-                case "Quota":
+                case "容量（mb）":
                     spinnerQuota.setValue(table.getValueAt(selectedRow, i));
                     break;
-                case "Sendonly":
+                case "只能发送":
                     chckbxSendonly.setSelected((Boolean) table.getValueAt(selectedRow, i));
                     break;
             }
